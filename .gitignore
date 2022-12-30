@@ -3,6 +3,11 @@
 
 .vs/
 x64/
+build/
 
 #file
 
+*.sln
+*.vcxproj
+*.filters
+*.user
