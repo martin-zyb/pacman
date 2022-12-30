@@ -6,7 +6,8 @@ At present, it is in the initial stage.
 Welcome friends who find problems to submit issues.  
 
 ## Project requirements
-1. Use multibyte character sets.  
+1. Use multibyte character sets.
+2. Visual Studio and install Easyx.    
 Continuously updated ......  
 
 ## issues
