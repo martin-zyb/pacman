@@ -15,5 +15,9 @@ Continuously updated ......
 2. PacMan can't eat the last bean.  
 Continuously updated ......  
 
+## To do
+1. Add the pause page.  
+Continuously updated ......  
+
 ## Last
 Thank you for your support for this project.  
