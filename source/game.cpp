@@ -1,5 +1,6 @@
 #include "game.h"
 #include "language.h"
+#include "uni.h"
 
 int cnt1 = 1;
 int cnt2 = 1;
@@ -39,7 +40,7 @@ void HpSleep(int ms)
 		oldclock = clock();
 	else
 		while (clock() < oldclock)			// delayed
-			Sleep(1);						// Release CPU control and reduce CPU utilization
+			uni::__sleep(1);						// Release CPU control and reduce CPU utilization
 }
 
 DWORD WINAPI time_thread(PVOID param)
