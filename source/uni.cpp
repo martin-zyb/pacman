@@ -9,8 +9,9 @@ namespace uni
 		#ifdef _WIN32
 			Sleep(seconds);
 		#elif __linux__
-			seconds \ = 1000;
-			sleep(seconds);
+			double seconds_f;
+			seconds_f = double(seconds) / 1000;
+			sleep(seconds_f);
 		#endif
 	}
 
