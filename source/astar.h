@@ -30,10 +30,12 @@ private:
 	int w_path;	// Path weight. The higher this value is, the more Monster pays attention to short paths
 
 	COLORREF color;
-	bool path_show;
+	
 	int cnt;
 
 public:
+	bool path_show;
+
 	CAStar() :s(0), e(0), w_inst(1), w_path(1), path_show(0), color(RED), cnt(0) {}
 
 	void SetNodeWall(int r,int c)

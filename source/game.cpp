@@ -27,7 +27,7 @@ int win;
 int highest_score;
 int choose;
 
-bool ShowConsole, fix;
+bool ShowConsole, fix, ShowPath;
 Language* language = new Language;
 
 void HpSleep(int ms)
@@ -87,6 +87,13 @@ DWORD WINAPI keyboard_thread(PVOID)
 					mons_list[i]->Fear(MONSTER_FEAR_TIME);
 				}
 			}
+			if (key == '0' && ShowPath)
+			{
+				for (int i = 0; i < 4; i++)
+				{
+					mons_list[i]->ShowPath();
+				}
+			}
 		}
 	}
 
@@ -106,8 +113,9 @@ DWORD WINAPI keyboard_thread(PVOID)
 	CMONSTER.init_rect(CRect(BURN_R * BLOCK_SIZE - PERSON_SIZE / 2,								\
 			BURN_C * BLOCK_SIZE - PERSON_SIZE / 2, PERSON_SIZE, PERSON_SIZE));					\
 	CMONSTER.init_img(&background, PFACE, PDEAD);												\
-/**CMONSTER.SwitchPathShow(COLOR);	/**/														\
-	CMONSTER.SetBrainStyle(INSTANCE, PATH);
+   CMONSTER.SwitchPathShow(COLOR);	/**/														\
+	CMONSTER.SetBrainStyle(INSTANCE, PATH);										\
+    CMONSTER.ShowPath();
 
 void init()
 {
@@ -501,7 +509,7 @@ void end_deal()
 	}
 }
 
-void st_fix()
+void st_cheat()
 {
 	fix = true;
 }
@@ -518,4 +526,9 @@ void Set_language(string type)
 		language->Init();
 	}
 	language->setting(type);
+}
+
+void Show_Path()
+{
+		ShowPath = true;
 }

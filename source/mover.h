@@ -682,6 +682,19 @@ public:
 		cd = 0;
 		status = 0;
 	}
+
+	void ShowPath()
+	{
+		if(brain.path_show)
+		{
+			brain.path_show = false;
+		}
+		else
+		{
+			brain.path_show = true;
+		}
+		return;
+	}
 };
 
 class CPacman : public CMover

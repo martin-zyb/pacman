@@ -21,17 +21,21 @@ void get_setting()			// Get Settings
 		 {
 			fin >> s2;
 			fin >> s2;
-			if (s1 == "fix" && s2 == "true")		
+			if (s1 == "Cheat" && s2 == "true")		
 			{
-				st_fix();				// Start cheating
+				st_cheat();				// Start cheating
 			}
 			if (s1 == "Show_Console" && s2 == "true")
 			{
 				Show_Console();			// Keep Command Line Window
 			}
-			if (s1 == "language")
+			if (s1 == "Language")
 			{
 				Set_language(s2);			// Set Language
+			}
+			if (s1 == "Path_DeBug" && s2 == "true")
+			{
+				Show_Path();					// Set Path Show in DeBug mode
 			}
 		 }
 	}

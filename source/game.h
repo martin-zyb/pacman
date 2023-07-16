@@ -36,6 +36,7 @@ void end_deal();
 
 void set_game_mode(int mode);
 
-void st_fix();
+void st_cheat();
 void Show_Console();
 void Set_language(string type = "en_us");
+void Show_Path();
